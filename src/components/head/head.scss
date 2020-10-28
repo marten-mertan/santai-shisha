@@ -1,0 +1,120 @@
+.head{
+    position: relative;
+    &-content{
+
+    }
+    &-slider{
+        width:100%;
+        height: 100vh;
+        position: relative;
+        @media screen and (max-width: 1140px){
+            position: relative;
+            height: auto;
+        }
+        &-item{
+            position: relative;
+            background: url('../assets/img/head.jpg') 50% 50% no-repeat;
+            background-size: cover;
+            height: 100vh;
+            @media screen and (max-width: 1140px){
+                background: url('../assets/img/banner-mobile.png') 50% 5% no-repeat;
+                background-size: auto;
+                padding: 312px 20px 20px;
+                height: auto;
+            }
+            &__title{
+                width: 100%;
+                position: absolute;
+                font-size: 24px;
+                line-height: 1;
+                font-weight: 400;
+                color: #fefefe;
+                text-transform: uppercase;
+                top: calc(50% + 40px);
+                left: 50%;
+                text-align: center;
+                letter-spacing: 34px;
+                transform: translate(-50%, -50%);
+                @media screen and (max-width: 1600px){
+                    top: calc(40% + 44px);
+
+                }
+                @media screen and (max-width: 1140px){
+                    top: 150px;
+                    font-size: 10px;
+                    letter-spacing: 14px;
+                }
+
+            }
+            &__subtitle{
+                position: absolute;
+                font-size: 24px;
+                line-height: 1;
+                color: #fff;
+                top: 53%;
+                left: 174px;
+                letter-spacing: 2px;
+                @media screen and (max-width: 1140px){
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    font-size: 16px;
+                    margin-bottom: 18px;
+
+                }
+
+            }
+            &__text{
+                position: absolute;
+                font-size: 16px;
+                color: #8f8fa1;
+                line-height: 1.5;
+                width: 316px;
+                top: 58%;
+                left: 174px;
+                @media screen and (max-width: 1140px){
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    font-size: 13px;
+                    margin-bottom: 25px;
+                    width: 100%;
+
+                }
+
+            }
+            &__date{
+                position: absolute;
+                font-size: 24px;
+                color: #fff;
+                line-height: 1;
+                top: 53%;
+                right: 270px;
+                letter-spacing: 3px;
+                @media screen and (max-width: 1140px){
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    font-size: 16px;
+                    text-align: center;
+                }
+                .mod-day{
+                    font-weight: bold;
+                    margin-left: 30px;
+                    @media screen and (max-width: 1140px){
+                        margin-left: 12px;
+                    }
+
+                }
+                .mod-mobile{
+                    display: none;
+                    @media screen and (max-width: 1140px){
+                        display: inline;
+                        color: #8f8fa1;
+                    }
+
+                }
+            }
+        }
+    }
+}

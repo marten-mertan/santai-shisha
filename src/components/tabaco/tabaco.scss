@@ -1,0 +1,193 @@
+.tabaco{
+    position: relative;
+    &-content{
+        padding: 74px 20px;
+        @media screen and (max-width: 1140px){
+            padding: 50px 20px 30px;
+            flex-direction: column;
+        }
+    }
+    &-decor{
+        position: absolute;
+        top: 26px;
+        right: 172px;
+        width: 620px;
+        height: 636px;
+        background: url('../assets/img/tabaco-decor.png') 50% 50% no-repeat;
+        background-size: cover;
+        @media screen and (max-width: 1140px){
+            display: none;
+        }
+
+    }
+    &__title{
+        font-size: 24px;
+        color: #f9b232;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 1;
+        text-align: center;
+        text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.88);
+        letter-spacing: 36px;
+        margin-bottom: 70px;
+        filter: drop-shadow(0px 0px 10px #ffca57);
+        @media screen and (max-width: 1140px){
+            font-size: 19px;
+            letter-spacing: 14px;
+            margin-bottom: 36px;
+        }
+    }
+    &__text{
+        font-size: 14px;
+        color: #8f8fa1;
+        line-height: 1.5;
+        max-width: 1000px;
+        margin-bottom: 18px;
+    }
+    &-tabs{
+        position: relative;
+        z-index: 2;
+        &-item{
+            display: flex;
+            justify-content: center;
+            width: 111px;
+            font-size: 14px;
+            color: #fff;
+            line-height: 1.2;
+            padding: 9px 12px 9px;
+            cursor: pointer;
+            &:not(:last-child){
+                margin-right: 8px;
+                @media screen and (max-width: 1140px){
+                    margin-right: 0;
+                }
+            }
+            &.active{
+                background-color: #f9b232;
+                color: #030508;
+            }
+        }
+        &-head{
+            display: flex;
+            margin: 44px -20px 44px;
+            @media screen and (max-width: 1140px){
+                margin: 36px 0 24px;
+            }
+
+        }
+        &-body{
+            &-regular{
+                display: none;
+                &.active{
+                    display: block;
+                }
+            }
+            &-xxx{
+                display: none;
+                &.active{
+                    display: block;
+                }
+
+            }
+            &-premium{
+                display: none;
+                &.active{
+                    display: block;
+                }
+
+            }
+        }
+        &-catalog{
+            display: flex;
+            flex-wrap: wrap;
+            @media screen and (max-width: 1140px){
+                flex-wrap: nowrap;
+                overflow-x: scroll;
+                margin: 0 -20px;
+
+            }
+            
+            &:after{
+                @media screen and (max-width: 1140px){
+                    content: "";
+                    display: block;
+                    width: 10px;
+                    height: 1px;
+                    flex: 0 0 auto;
+                }
+            }
+            &-item{
+                display: flex;
+                flex: 0 0 auto;
+                flex-direction: column;
+                width: 300px;
+                height: 434px;
+                padding: 35px 33px 43px;
+                border: 1px solid  #40465e;
+                background-color: rgba(9, 13, 22, 0.5);
+                margin-right: 30px;
+                margin-bottom: 30px;
+                transition: all .3s ease;
+                cursor: pointer;
+                @media screen and (max-width: 1140px){
+                    width: 132px;
+                    height: 225px;
+                    padding: 10px 11px 12px;
+                    margin-right: 10px;
+                }
+                &:first-child{
+                    @media screen and (max-width: 1140px){
+                        margin-left: 20px;
+                    }
+
+                }
+                &:last-child{
+
+                }
+                &:hover{
+                    border-color: #fccb47;
+                    .tabaco-tabs-catalog-item__price{
+                        color: #f9b232;
+                    }
+                }
+                &__name{
+                    font-size: 14px;
+                    color: #fff;
+                    line-height: 1.5;
+                    @media screen and (max-width: 1140px){
+                        font-size: 12px;
+                    }
+                }
+                &__img{
+                    flex: 1 1 auto;
+                    background: none 50% 50% no-repeat;
+                    background-size: contain;
+                    height: 100%;
+    
+                }
+                &__oldprice{
+                    font-size: 18px;
+                    color: #737382;
+                    text-decoration: line-through;
+                    line-height: 1;
+                    margin-bottom: 17px;
+                    @media screen and (max-width: 1140px){
+                        font-size: 13px;
+                        margin-bottom: 11px;
+                    }
+                }
+                &__price{
+                    font-size: 24px;
+                    color: #fff;
+                    line-height: 1;
+                    transition: all .3s ease;
+                    @media screen and (max-width: 1140px){
+                        font-size: 16px;
+                    }
+
+                }
+            }
+
+        }
+    }
+}

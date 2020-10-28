@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Santai Shisha</title>
+    
+    <link rel="stylesheet" href="styles/vendor/slick/slick.css">
+    <link rel="stylesheet" href="styles/vendor/aos/aos.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+
+    <link rel="stylesheet" href="styles/index.css">
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <div class="site">
+
+        {% include "../components/header/header.twig" %}
+        {% include "../components/header/header-float.twig" %}
+
+        <div class="content">
+
+            {% include "../components/head/head.twig" %}
+            {% include "../components/about/about.twig" %}
+            
+            {% include "../components/tabaco/tabaco.twig" %}
+            {% include "../components/gallery/gallery.twig" %}
+
+            {% include "../components/reviews/reviews.twig" %}
+            {% include "../components/question/question.twig" %}
+
+        </div>
+
+         {% include "../components/footer/footer.twig" %}
+
+        <div class="mfp-wrap js-popup-form" style="overflow-y: scroll;">
+            <div class="mfp-container">
+                <div class="mfp-content">
+                    <div class="popup ">
+                        <div class="popup-body">
+                            <div class="popup__title">Арендовать кальян</div>
+                            <form class="popup-form" autocomplete="off">
+                                <div class="popup-form-row">
+                                    <label class="popup-form__input">
+                                        <p class="popup-form-input__text">Представьтесь</p>
+                                        <input type="text" name="name" autocomplete="off" placeholder="Гость">
+                                    </label>
+                                    <label class="popup-form__input">
+                                        <p class="popup-form-input__text"><span class="mod-yellow">*</span> Ваш телефон</p>
+                                        <input type="text" name="phone" autocomplete="off" placeholder="+7 ( ) - -">
+                                    </label>
+                                </div>
+                                <div class="popup-form__text">
+                                    Доставка осуществляется по следующим районам: </br>
+                                    Перечисление районов доставки, по городу Ломоносовский. Исакогорский,  Затон, Маймаксы...
+                                </div>
+                                <div class="popup-form-bottom">
+                                    <a href="/" class="popup-form-bottom__btn">
+                                        Оформить заказ
+                                    </a>
+                                    <div class="popup-form-bottom__text">
+                                        Нажимая кнопку Оформить заказ
+                                        Вы даете согласие на обработку 
+                                        персональных данных
+                                    </div>
+                                
+                                </div>
+                            </form>
+                        </div>
+                        <div class="popup__close js-popup-close">
+                            ×
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mfp-wrap popup-menu-mobile js-popup-menu-mobile">
+            <div class="mfp-container">
+                <div class="mfp-content">
+                    <div class="popup ">
+                        <div class="popup-body">
+                            <ul class="popup-nav-list">
+                            <li class="popup-nav-list__item">
+                                <a href="#head" class="popup-nav-list__link active js-link js-popup-close">
+                                    Аромат месяца
+                                </a>
+                            </li>
+                            <li class="popup-nav-list__item">
+                                <a href="#about" class="popup-nav-list__link js-link js-popup-close">
+                                    О заведении
+                                </a>
+                            </li>
+                            <li class="popup-nav-list__item">
+                                <a href="#tabaco" class="popup-nav-list__link js-link js-popup-close">
+                                    Наш табак
+                                </a>
+                            </li>
+                            <li class="popup-nav-list__item">
+                                <a href="#gallery" class="popup-nav-list__link js-link js-popup-close">
+                                    Галерея
+                                </a>
+                            </li>
+                            <li class="popup-nav-list__item">
+                                <a href="#reviews" class="popup-nav-list__link js-link js-popup-close">
+                                    Отзывы
+                                </a>
+                            </li>
+                            <li class="popup-nav-list__item">
+                                <a href="#contacts" class="popup-nav-list__link js-link js-popup-close">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="popup-nav-list__item">
+                                <a href="/" class="popup-nav-list__link js-popup-close">
+                                    Стать партнером
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="popup__close js-popup-close">
+                            ×
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mfp-bg"></div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="scripts/vendor/slick/slick.js"></script>
+    <script src="scripts/bundle.js"></script>
+</body>
+</html>

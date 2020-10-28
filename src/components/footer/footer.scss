@@ -1,0 +1,171 @@
+.footer{
+    &-body{
+        &-content{
+            padding: 0 20px;
+        }
+    }
+    &-contacts{
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0 60px;
+        @media screen and (max-width: 1140px){
+            flex-wrap: wrap;
+            padding: 50px 0 20px;
+            max-width: 670px;
+            margin-left: auto;
+        }
+        @media screen and (max-width: 640px){
+            flex-direction: column;
+            padding: 50px 0 20px;
+        }
+        &-item{
+            display: flex;
+            @media screen and (max-width: 1140px){
+                width: 50%;
+                margin-bottom: 34px;
+            }
+            @media screen and (max-width: 640px){
+                justify-content: space-between;
+                min-width: 280px;
+                margin: 0 auto 34px;
+            }
+            &__icon{
+                flex: 0 0 auto;
+                margin-right: 20px;
+                margin-top: 47px;
+                @media screen and (max-width: 1140px){
+                    margin-right: auto;
+                    margin-top: 0;
+                }
+                svg{
+                    fill: #f6b745;
+                    filter: drop-shadow(0px 0px 20px rgba(255, 247, 116, 0.8));
+                }
+            }
+            &__info{
+                flex: 1 1 auto;
+                @media screen and (max-width: 1140px){
+                    flex: 0 0 auto;
+                    width: calc(100% - 42px);
+                }
+            }
+            &__title{
+                font-size: 14px;
+                line-height: 2;
+                color: #8f8fa1;
+                margin-bottom: 10px;
+                @media screen and (max-width: 1140px){
+                    font-size: 13px;
+                    line-height: 1;
+                    margin-bottom: 8px
+                }
+
+            }
+            &__text{
+                font-size: 14px;
+                line-height: 2;
+                color: #fff;
+                @media screen and (max-width: 1140px){
+                    font-size: 12px;
+                    line-height: 17px;
+                    margin-bottom: 8px
+                }
+                .mod-days{
+                    color: #8f8fa1;
+                    margin-right: 17px;
+
+                }
+                &.mod-phone{
+                    @media screen and (max-width: 1140px){
+                        font-size: 14px;
+                        line-height: 17px;
+                    }
+
+                }
+            }
+            &-social{
+                @media screen and (max-width: 1140px){
+                    margin-bottom: 4px;
+                }
+                &__link{
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+    &-map{
+        width: 100%;
+        height: 655px;
+        filter: invert(1);
+        @media screen and (max-width: 1140px){
+            height: 342px;
+        }
+    }
+    &-bottom{
+        &-content{
+            padding: 24px 20px 50px;
+        }
+        &__text{
+            font-size: 14px;
+            color: #8f8fa1;
+            line-height: 2;
+            @media screen and (max-width: 1140px){
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+.icon-location{
+    width: 45px;
+    height: 44px;
+    
+    @media screen and (max-width: 1140px){
+        width: 30px;
+        height: 29px;
+    }
+}
+
+.icon-metro{
+    width: 49px;
+    height: 40px;
+    @media screen and (max-width: 1140px){
+        width: 26px;
+        height: 21px;
+    }
+}
+
+.icon-send{
+    width: 37px;
+    height: 37px;
+    @media screen and (max-width: 1140px){
+        width: 22px;
+        height: 22px;
+    }
+}
+
+.icon-clock{
+    width: 39px;
+    height: 39px;
+    @media screen and (max-width: 1140px){
+        width: 27px;
+        height: 27px;
+    }
+
+}
+
+.icon-instagram{
+    width: 21px;
+    height: 21px;
+}
+
+.icon-telegram{
+    width: 21px;
+    height: 21px;
+}
+
+.icon-whatsapp{
+    width: 21px;
+    height: 21px;
+}
