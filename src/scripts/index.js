@@ -5,7 +5,7 @@ $(document).ready(function () {
         $(document).on("click", elem, function (event) {
             event.preventDefault();
             var id  = $(this).attr('href'),
-                menuHeight = 213,
+                menuHeight = 0,
                 top = $(id).offset().top,
                 topIndent = top - menuHeight;
 
@@ -113,7 +113,7 @@ $(document).ready(function () {
     var $sections = $('.js-section');
     $(window).scroll(function() {
         $sections.each(function(i,el){
-            var top  = $(el).offset().top-240;
+            var top  = $(el).offset().top - 120;
             var bottom = top +$(el).height();
             var scroll = $(window).scrollTop();
             var id = $(el).attr('id');
@@ -142,5 +142,13 @@ $(document).ready(function () {
         let tab = $(this).data('tab');
         $('.js-tab-content').removeClass('active');
         $('#'+tab).addClass('active');
+    });
+
+    // 100vh на мобилках
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
 });

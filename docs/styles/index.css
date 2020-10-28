@@ -739,6 +739,7 @@ div {
     @media screen and (max-width: 1140px) {
       .header-body-content {
         min-height: 100vh;
+        min-height: calc(var(--vh, 1vh) * 100);
         display: flex;
         flex-direction: column;
         justify-content: space-between; } }
@@ -1634,19 +1635,15 @@ a {
     align-items: center;
     width: 100%;
     border-radius: 0;
-    padding: 52px 80px 58px 105px;
+    padding: 72px 80px 58px 105px;
     background: url(../assets/img/popup-back.png) 50% 50% no-repeat;
     background-size: cover; }
     @media screen and (max-width: 840px) {
       .popup-body {
-        padding: 36px 15px 36px;
+        padding: 62px 15px 36px;
         width: 100%; } }
   .popup__close {
     position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     width: 26px;
     height: 26px;
     top: 46px;
@@ -1660,6 +1657,8 @@ a {
       content: "";
       display: block;
       position: absolute;
+      top: 50%;
+      left: 0;
       z-index: 2;
       width: 30px;
       border-bottom: 3px solid #737382;
@@ -1671,6 +1670,8 @@ a {
       content: "";
       display: block;
       position: absolute;
+      top: 50%;
+      left: 0;
       z-index: 2;
       width: 30px;
       border-bottom: 3px solid #737382;
