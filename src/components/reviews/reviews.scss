@@ -136,6 +136,9 @@
         }
         &.back{
             left: -52px;
+            @media screen and (max-width: 1800px){
+                left: -20px;
+            }
             @media screen and (max-width: 1140px){
                 left: calc(50% - 42px);
             }
@@ -149,6 +152,9 @@
         }
         &.next{
             right: -52px;
+            @media screen and (max-width: 1800px){
+                right: -20px;
+            }
             @media screen and (max-width: 1140px){
                 right: calc(50% - 42px);
             }
