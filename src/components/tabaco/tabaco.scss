@@ -56,11 +56,15 @@
             line-height: 1.2;
             padding: 9px 12px 9px;
             cursor: pointer;
+            transition: all .3s ease;
             &:not(:last-child){
                 margin-right: 8px;
                 @media screen and (max-width: 1140px){
                     margin-right: 0;
                 }
+            }
+            &:hover{
+                color: #f9b232;
             }
             &.active{
                 background-color: #f9b232;
@@ -69,7 +73,7 @@
         }
         &-head{
             display: flex;
-            margin: 44px -20px 44px;
+            margin: 44px 0 44px;
             @media screen and (max-width: 1140px){
                 margin: 36px 0 24px;
             }

@@ -6,13 +6,12 @@
     }
     &-contacts{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         padding: 50px 0 60px;
-        @media screen and (max-width: 1140px){
+        @media screen and (max-width: 640px){
             flex-wrap: wrap;
+            width: 100%;
             padding: 50px 0 20px;
-            max-width: 670px;
-            margin-left: auto;
         }
         @media screen and (max-width: 640px){
             flex-direction: column;
@@ -20,8 +19,17 @@
         }
         &-item{
             display: flex;
+            &:not(:last-child){
+                margin-right: 156px;
+                @media screen and (max-width: 1140px){
+                    margin-right: 12px;
+                }
+            }
             @media screen and (max-width: 1140px){
-                width: 50%;
+                width: calc(33% - 8px);
+            }
+            @media screen and (max-width: 640px){
+                width: 100%;
                 margin-bottom: 34px;
             }
             @media screen and (max-width: 640px){

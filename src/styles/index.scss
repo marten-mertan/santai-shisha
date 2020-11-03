@@ -13,7 +13,8 @@ a{
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    font-family: "Montserrat";
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     overflow: hidden;
     background-color: #090d16;
 
@@ -35,29 +36,52 @@ a{
 .arrows{
     position: absolute;
     display: block;
-    width: 14px;
-    height: 20px;
-    top: calc(54% - 8px);
-    background: url('../assets/img/arrow-left.png') 50% 50% no-repeat;
-    background-size: cover;
+    width: 38px;
+    height: 38px;
+    top: calc(53% - 6px);
     z-index: 2;
     cursor: pointer;
+    transition: all .3s ease;
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        border: solid #747484;
+        border-width: 0 3px 3px 0;
+        padding: 4px;
+        top: calc(50% - 7px);
+        transition: all .3s ease;
+    }
+    &:hover{
+        transform: scale(1.15, 1.15);
+        &:after{
+            border-color:#f9b232;
+
+        }
+    }
     @media screen and (max-width: 1140px){
         top: auto;
-        bottom: 18px;
+        bottom: 8px;
     }
     &.back{
         left: 115px;
         @media screen and (max-width: 1140px){
             left: 40px;
         }
+        &:after {
+            transform: rotate(135deg);
+            right: calc(50% - 8px);
+        }
         
     }
     &.next{
         right: 115px;
-        transform: scale(-1, 1);
         @media screen and (max-width: 1140px){
             right: 40px;
+        }
+        &:after {
+            transform: rotate(-45deg);
+            right: calc(50% - 3px);
         }
 
     }
@@ -336,6 +360,7 @@ a{
                 text-align: center;
             }
             &__btn{
+                
                 display: block;
                 width: 100%;
                 padding: 23px 10px;
@@ -348,6 +373,31 @@ a{
                 filter: drop-shadow(0px 0px 50px rgba(255, 202, 87, 0.5));
                 margin-bottom: 24px;
                 text-align: center;
+                overflow: hidden;
+                .hover{
+                    position: absolute;
+                    display: block;
+                    width: 0px;
+                    height: 0px;
+                    top: 50%;
+                    left: 50%;
+                    border-radius: 50%;
+                    background-color: #f4a61b;
+                    transform: translate(-50%, -50%);
+                    transition: width .5s ease-in-out, height .5s ease-in-out;
+                    z-index: 1;
+                    
+                }
+                .mod-text{
+                    position: relative;
+                    z-index: 2;
+                }
+                &:hover{
+                    .hover{
+                        width: 500px;
+                        height: 500px;
+                    }
+                }
             }
         }
     }
@@ -373,6 +423,72 @@ a{
         background: none;
     }
     @media screen and (max-width: 1140px){
+
+    }
+}
+
+.popup-gallery{
+    .popup-body{
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: none;
+    }
+    .mfp-content{
+        height: 100%;
+        max-width: none;
+    }
+    .popup {
+        height: 100%;
+        background-color: transparent;
+    }
+    .popup__close{
+        &:after{
+            transition: all .3s ease;
+
+        }
+        &:before{
+            transition: all .3s ease;
+
+        }
+        &:hover{
+            &:before{
+                border-color: #f9b232;
+            }
+            &:after{
+                border-color: #f9b232;
+            }
+        }
+    }
+    &-image{
+        width: 100%;
+        height: 100%;
+        background: url(../assets/img/gallery-full-1.jpg) 50% 50% no-repeat;
+        background-size: auto;
+        @media screen and (max-width: 1140px){
+            background-size: contain;
+        }
+
+    }
+    .gallery-arrows{
+        @media screen and (max-width: 1140px){
+            display: block;
+            height: 38px;
+            width: 38px;
+            top: calc(50% - 19px);
+        }
+        &.back{
+            left: 68px;
+            @media screen and (max-width: 1140px){
+                left: 20px;
+            }
+        }
+        &.next{
+            right: 68px;
+            @media screen and (max-width: 1140px){
+                right: 20px;
+            }
+        }
 
     }
 }

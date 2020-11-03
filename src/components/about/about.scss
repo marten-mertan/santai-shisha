@@ -162,6 +162,7 @@
         top: calc(50% - 30px);
         border: 2px solid #fff;
         z-index: 2;
+        transition: all .3s ease;
         cursor: pointer;
         @media screen and (max-width: 1140px){
             width: 26px;
@@ -177,8 +178,17 @@
             border-width: 0 3px 3px 0;
             padding: 5px;
             top: calc(50% - 6px);
+            transition: all .3s ease;
             @media screen and (max-width: 1140px){
                 border-width: 0 2px 2px 0;
+            }
+        }
+        
+        &:hover{
+            border-color: #f9b232;
+            &:after{
+                border-color: #f9b232;
+
             }
         }
         &.back{
