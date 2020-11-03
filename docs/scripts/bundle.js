@@ -99,7 +99,7 @@ $(document).ready(function () {
                 top = $(id).offset().top,
                 topIndent = top - menuHeight;
 
-            $('html').animate({scrollTop: topIndent}, 1000);
+            $("html, body").animate({scrollTop: topIndent}, 1000);
         });
     };
 
