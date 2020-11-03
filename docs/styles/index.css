@@ -405,6 +405,7 @@ div {
       @media screen and (max-width: 1140px) {
         .footer-contacts-item__text {
           font-size: 12px;
+          font-weight: 400;
           line-height: 17px;
           margin-bottom: 8px; } }
       .footer-contacts-item__text .mod-days {
@@ -924,6 +925,7 @@ div {
         margin-bottom: 8px; } }
     .header-contacts-phone__link {
       font-size: 24px;
+      font-weight: 400;
       color: #8f8fa1;
       text-transform: uppercase;
       line-height: 1;
@@ -1601,6 +1603,7 @@ div {
           height: 100%; }
         .tabaco-tabs-catalog-item__oldprice {
           font-size: 18px;
+          font-weight: 400;
           color: #737382;
           text-decoration: line-through;
           line-height: 1;
@@ -1611,6 +1614,7 @@ div {
               margin-bottom: 11px; } }
         .tabaco-tabs-catalog-item__price {
           font-size: 24px;
+          font-weight: 400;
           color: #fff;
           line-height: 1;
           transition: all .3s ease; }
@@ -1629,7 +1633,7 @@ a {
   flex-direction: column;
   min-height: 100%;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   overflow: hidden;
   background-color: #090d16; }
 

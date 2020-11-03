@@ -171,6 +171,7 @@
                 }
                 &__oldprice{
                     font-size: 18px;
+                    font-weight: 400;
                     color: #737382;
                     text-decoration: line-through;
                     line-height: 1;
@@ -182,6 +183,7 @@
                 }
                 &__price{
                     font-size: 24px;
+                    font-weight: 400;
                     color: #fff;
                     line-height: 1;
                     transition: all .3s ease;
