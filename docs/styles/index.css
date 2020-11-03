@@ -166,14 +166,14 @@ div {
 .about__title {
   font-size: 24px;
   color: #f9b232;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   line-height: 1;
   text-align: center;
   text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.88);
   letter-spacing: 36px;
   margin-bottom: 136px;
-  filter: drop-shadow(0px 0px 10px #ffca57); }
+  filter: drop-shadow(0px 0px 20px #ffca57); }
   @media screen and (max-width: 1140px) {
     .about__title {
       font-size: 19px;
@@ -494,14 +494,14 @@ div {
 .gallery__title {
   font-size: 24px;
   color: #f9b232;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   line-height: 1;
   text-align: center;
   text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.88);
   letter-spacing: 36px;
   margin-bottom: 70px;
-  filter: drop-shadow(0px 0px 10px #ffca57); }
+  filter: drop-shadow(0px 0px 20px #ffca57); }
   @media screen and (max-width: 1140px) {
     .gallery__title {
       font-size: 19px;
@@ -707,7 +707,7 @@ div {
         position: absolute;
         font-size: 24px;
         line-height: 1;
-        font-weight: 400;
+        font-weight: 600;
         color: #fefefe;
         text-transform: uppercase;
         top: calc(50% + 40px);
@@ -1130,14 +1130,14 @@ div {
 .question__title {
   font-size: 24px;
   color: #f9b232;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   line-height: 60px;
   text-align: center;
   text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.88);
   letter-spacing: 36px;
   margin-bottom: 80px;
-  filter: drop-shadow(0px 0px 10px #ffca57); }
+  filter: drop-shadow(0px 0px 20px #ffca57); }
   @media screen and (max-width: 1140px) {
     .question__title {
       position: relative;
@@ -1324,14 +1324,14 @@ div {
   .reviews__title {
     font-size: 24px;
     color: #f9b232;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
     line-height: 1;
     text-align: center;
     text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.88);
     letter-spacing: 36px;
     margin-bottom: 98px;
-    filter: drop-shadow(0px 0px 10px #ffca57); }
+    filter: drop-shadow(0px 0px 20px #ffca57); }
     @media screen and (max-width: 1140px) {
       .reviews__title {
         font-size: 19px;
@@ -1488,14 +1488,14 @@ div {
   .tabaco__title {
     font-size: 24px;
     color: #f9b232;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
     line-height: 1;
     text-align: center;
     text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.88);
     letter-spacing: 36px;
     margin-bottom: 70px;
-    filter: drop-shadow(0px 0px 10px #ffca57); }
+    filter: drop-shadow(0px 0px 20px #ffca57); }
     @media screen and (max-width: 1140px) {
       .tabaco__title {
         font-size: 19px;
@@ -1845,7 +1845,7 @@ a {
     font-size: 19px;
     color: #ffd557;
     line-height: 1;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 65px;
     letter-spacing: 16px; }
