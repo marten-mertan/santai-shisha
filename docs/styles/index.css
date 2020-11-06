@@ -165,7 +165,7 @@ div {
 
 .about__title {
   font-size: 24px;
-  color: #f9b232;
+  color: #ffc633;
   font-weight: 600;
   text-transform: uppercase;
   line-height: 1;
@@ -224,7 +224,7 @@ div {
         .about-icons-item__icon {
           margin-bottom: 16px; } }
       .about-icons-item__icon svg {
-        fill: #f6b745;
+        fill: #ffc633;
         filter: drop-shadow(0px 0px 10px #ffca57); }
     .about-icons-item__text {
       font-size: 14px;
@@ -388,7 +388,7 @@ div {
           margin-right: 12px;
           width: 30px; } }
       .footer-contacts-item__icon svg {
-        fill: #f6b745;
+        fill: #ffc633;
         filter: drop-shadow(0px 0px 20px rgba(255, 247, 116, 0.8)); }
     .footer-contacts-item__info {
       flex: 1 1 auto; }
@@ -539,7 +539,7 @@ div {
 
 .gallery__title {
   font-size: 24px;
-  color: #f9b232;
+  color: #ffc633;
   font-weight: 600;
   text-transform: uppercase;
   line-height: 1;
@@ -732,22 +732,26 @@ div {
   .head-slider {
     width: 100%;
     height: 100vh;
+    min-height: 950px;
     position: relative; }
     @media screen and (max-width: 1140px) {
       .head-slider {
         position: relative;
-        height: auto; } }
+        height: auto;
+        min-height: 0; } }
     .head-slider-item {
       position: relative;
-      background: url("../assets/img/head.jpg") 50% 50% no-repeat;
+      background: url("../assets/img/head.jpg") 50% 5% no-repeat;
       background-size: cover;
-      height: 100vh; }
+      height: 100vh;
+      min-height: 950px; }
       @media screen and (max-width: 1140px) {
         .head-slider-item {
           background: url("../assets/img/banner-mobile.png") 50% 5% no-repeat;
           background-size: auto;
           padding: 312px 20px 20px;
-          height: auto; } }
+          height: auto;
+          min-height: 0; } }
       .head-slider-item__title {
         width: 100%;
         position: absolute;
@@ -1234,7 +1238,7 @@ div {
 
 .question__title {
   font-size: 24px;
-  color: #f9b232;
+  color: #ffc633;
   font-weight: 600;
   text-transform: uppercase;
   line-height: 60px;
@@ -1427,7 +1431,7 @@ div {
         padding: 50px 20px 60px; } }
   .reviews__title {
     font-size: 24px;
-    color: #f9b232;
+    color: #ffc633;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1;
@@ -1591,7 +1595,7 @@ div {
         display: none; } }
   .tabaco__title {
     font-size: 24px;
-    color: #f9b232;
+    color: #ffc633;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1;
