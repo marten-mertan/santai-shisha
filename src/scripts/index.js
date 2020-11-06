@@ -131,6 +131,16 @@ $(document).ready(function () {
                     $('.header.float').addClass('active');
                 }
             }
+
+            //fixed mobile header
+            if (i == 0){
+                var windowHeight = window.innerHeight;
+                if( scroll < (top)){
+                    $('.header-mobile').removeClass('active');
+                } else{
+                    $('.header-mobile').addClass('active');
+                }
+            }
         });
     });
 
