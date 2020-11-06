@@ -215,7 +215,7 @@ $(document).ready(function () {
             //fixed header
             if (i == 0){
                 var windowHeight = window.innerHeight;
-                if( scroll < (140)){
+                if( scroll < (180)){
                     $('.header.float').removeClass('active');
                 } else{
                     $('.header.float').addClass('active');

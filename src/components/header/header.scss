@@ -322,6 +322,18 @@
             margin-left: 0;
             padding: 16px 10px;
         }
+        &.active{
+            @media screen and (max-width: 1140px){
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                
+                padding: 9px 12px;
+                font-size: 10px;
+                width: 160px;
+                border-width: 1px;
+            }
+        }
 
     }
     &.float{
@@ -380,6 +392,9 @@
         z-index: 1;
         @media screen and (max-width: 1140px){
             display: block;
+        }
+        &.active{
+            width: 100%;
         }
         
     }

@@ -1093,6 +1093,15 @@ div {
         width: 210px;
         margin-left: 0;
         padding: 16px 10px; } }
+    @media screen and (max-width: 1140px) {
+      .header-btn.active {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 9px 12px;
+        font-size: 10px;
+        width: 160px;
+        border-width: 1px; } }
   .header.float {
     position: fixed;
     top: -300px;
@@ -1139,6 +1148,8 @@ div {
     @media screen and (max-width: 1140px) {
       .header-burger {
         display: block; } }
+    .header-burger.active {
+      width: 100%; }
 
 .question-body {
   max-width: 1700px;
