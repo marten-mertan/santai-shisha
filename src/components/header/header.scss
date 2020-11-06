@@ -397,6 +397,7 @@
         
     }
     &-mobile{
+        display: none;
         width: 100%;
         position: fixed;
         top: -300px;
@@ -405,6 +406,9 @@
         height: 63px;
         background-color: #090d16;
         z-index: 20;
+        @media screen and (max-width: 1140px){
+            display: block;
+        }
         &.active{
             transition: all .4s ease;
             top: 0px;
