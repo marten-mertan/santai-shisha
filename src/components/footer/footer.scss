@@ -40,7 +40,10 @@
             &__icon{
                 flex: 0 0 auto;
                 margin-right: 20px;
-                margin-top: 47px;
+                margin-top: 10px;
+                @media screen and (max-width: 1640px){
+                    margin-top: 47px;
+                }
                 @media screen and (max-width: 1140px){
                     margin-right: auto;
                     margin-top: 0;
@@ -52,16 +55,24 @@
             }
             &__info{
                 flex: 1 1 auto;
+                @media screen and (max-width: 1640px){
+                    flex: 0 0 auto;
+                    max-width: 240px;
+                }
                 @media screen and (max-width: 1140px){
                     flex: 0 0 auto;
                     width: calc(100% - 42px);
+                    max-width: none;
                 }
             }
             &__title{
                 font-size: 14px;
                 line-height: 2;
                 color: #8f8fa1;
-                margin-bottom: 10px;
+                margin-bottom: 0;
+                @media screen and (max-width: 1640px){
+                    margin-bottom: 10px;
+                }
                 @media screen and (max-width: 1140px){
                     font-size: 13px;
                     line-height: 1;
@@ -71,17 +82,21 @@
             }
             &__text{
                 font-size: 14px;
+                font-weight: normal;
                 line-height: 2;
                 color: #fff;
                 @media screen and (max-width: 1140px){
                     font-size: 12px;
                     font-weight: 400;
                     line-height: 17px;
-                    margin-bottom: 8px
+                    margin-bottom: 0;
                 }
                 .mod-days{
                     color: #8f8fa1;
-                    margin-right: 17px;
+                    margin-right: 14px;
+                    @media screen and (max-width: 1640px){
+                        margin-right: 17px;
+                    }
 
                 }
                 &.mod-phone{
@@ -92,12 +107,36 @@
 
                 }
             }
+            &-time{
+                display: flex;
+                flex-direction: row;
+                @media screen and (max-width: 1640px){
+                    flex-direction: column;
+                }
+                &-line{
+                    font-size: 14px;
+                    font-weight: normal;
+                    line-height: 2;
+                    color: #fff;
+                    margin: 0 12px 0 4px;
+                    @media screen and (max-width: 1640px){
+                        display: none;
+                    }
+                }
+            }
             &-social{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: wrap;
                 @media screen and (max-width: 1140px){
                     margin-bottom: 4px;
                 }
                 &__link{
-                    margin-right: 8px;
+                    margin: 4px 20px 0 0;
+                    @media screen and (max-width: 1640px){
+                        margin: 0 12px 4px 0;
+                    }
                 }
             }
         }

@@ -1,7 +1,7 @@
 .about{
     &-content{
         display: flex;
-        padding: 213px 20px 30px;
+        padding: 60px 20px 30px;
         @media screen and (max-width: 1140px){
             padding: 50px 20px 30px;
             flex-direction: column;
@@ -13,7 +13,7 @@
         max-width: 685px;
         padding-top: 80px;
         @media screen and (max-width: 1700px){
-            width: 40%;
+            width: 55%;
         }
         @media screen and (max-width: 1140px){
             padding: 0;
@@ -108,10 +108,13 @@
                 }
             }
             &__text{
-                font-size: 12px;
+                font-size: 14px;
                 line-height: 16px;
                 color: #8f8fa1;
                 text-align: center;
+                @media screen and (max-width: 1140px){
+                    min-height: 32px;
+                }
             }
             &__extra{
                 font-size: 22px;
@@ -125,7 +128,7 @@
         margin-right: calc((-100vw + 100%) / 2);
         @media screen and (max-width: 1700px){
             margin: 0 -20px 0 auto;
-            width: 60%;
+            width: 45%;
         }
         @media screen and (max-width: 1140px){
             margin: 0 -20px;

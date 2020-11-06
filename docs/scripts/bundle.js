@@ -124,7 +124,6 @@ $(document).ready(function () {
         prevArrow: '<a class="about-arrows back"></a>',
         nextArrow: '<a class="about-arrows next"></a>'
     });
-    
     $(document).on('click', '.js-gallery-back', function () {
         let speed = 700;
         let transform = parseInt($('.gallery-wrap').css('transform').split(',')[4]);
@@ -160,8 +159,7 @@ $(document).ready(function () {
               breakpoint: 1560,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1,
-                adaptiveHeight: true
+                slidesToScroll: 1
               }
             }
         ]
@@ -217,7 +215,7 @@ $(document).ready(function () {
             //fixed header
             if (i == 0){
                 var windowHeight = window.innerHeight;
-                if( scroll < (windowHeight + 30)){
+                if( scroll < (140)){
                     $('.header.float').removeClass('active');
                 } else{
                     $('.header.float').addClass('active');
@@ -259,11 +257,37 @@ $(document).ready(function () {
           });
     });
 
+    function preload(images) {
+        if (typeof document.body == "undefined") return;
+        try {
+            var div = document.createElement("div");
+            var s = div.style;
+            s.position = "absolute";
+            s.top = s.left = 0;
+            s.visibility = "hidden";
+            document.body.appendChild(div);
+            div.innerHTML = "<img src=\"" + images.join("\" /><img src=\"") + "\" />";
+        } catch(e) {
+            // Error. Do nothing.
+        }
+    }
+
     $('.js-gallery-item').on('click', function(e) {
+        $('.popup-gallery-image img').attr('src', '');
+        e.preventDefault();
+        var index = 0;
         var windowWidth = (window.innerWidth );
         var documentWidth = (document.documentElement.clientWidth );
         var $html = $('html');
-        e.preventDefault();
+        var items = $('.js-gallery-item');
+        var src = [];
+        $(this).addClass('active');
+        items.each(function(i){
+            src[i] = $(this).data('full');
+            if ($(this).hasClass('active')){
+                index = i;
+            }
+        });
         $('.popup-gallery').addClass('is-visible');
         $('.mfp-bg').addClass('is-visible');
         $html.addClass('lock-html');
@@ -276,65 +300,72 @@ $(document).ready(function () {
         }else {
             // console.log('Нет полосы прокрутки');
         }
-        var src = $(this).data('full');
-        $(this).addClass('active');
-        $('.popup-gallery-image').css({
-            'background-image':'url('+src+')'
-        })
+        $('.popup-gallery-image img').attr('src', src[index]);
+        
+         preload([
+             src[index],
+             (index < src.length-1) ? src[index+1] : src[0],
+             (index > 0) ? src[index-1] : src[src.length-1]
+         ]);
     });
 
-    
     $(document).on('click', '.js-popup-gallery-back', function (e) {
         e.preventDefault();
+        $('.popup-gallery-image img').attr('src', '');
         var index = 0;
-        var src = '';
+        var src = [];
         var items = $('.js-gallery-item');
         items.each(function(i){
+            src[i] = $(this).data('full');
             if ($(this).hasClass('active')){
                 index = i;
                 $(this).removeClass('active');
             }
         });
         if (index){
-            src = $(items[index-1]).data('full');
-            $(items[index-1]).addClass('active');
-            $('.popup-gallery-image').css({
-                'background-image':'url('+src+')'
-            })
+            index = index - 1;
+            $(items[index]).addClass('active');
+            $('.popup-gallery-image img').attr('src', src[index]);
         } else {
-            src = $(items[items.length-1]).data('full');
-            $(items[items.length-1]).addClass('active');
-            $('.popup-gallery-image').css({
-                'background-image':'url('+src+')'
-            })
-
+            index = items.length-1;
+            $(items[index]).addClass('active');
+            $('.popup-gallery-image img').attr('src', src[index]);
         }
+        preload([
+            src[index],
+            (index < src.length-1) ? src[index+1] : src[0],
+            (index > 0) ? src[index-1] : src[src.length-1]
+        ]);
     });
     $(document).on('click', '.js-popup-gallery-next', function (e) {
         e.preventDefault();
+        $('.popup-gallery-image img').attr('src', '');
         var index = 0;
-        var src = '';
+        var src = [];
         var items = $('.js-gallery-item');
         items.each(function(i){
+            src[i] = $(this).data('full');
             if ($(this).hasClass('active')){
                 index = i;
                 $(this).removeClass('active');
             }
         });
         if (index < items.length-1){
-            src = $(items[index+1]).data('full');
-            $(items[index+1]).addClass('active');
-            $('.popup-gallery-image').css({
-                'background-image':'url('+src+')'
-            })
+            index = index + 1;
+            $(items[index]).addClass('active');
+            $('.popup-gallery-image img').attr('src', src[index]);
         } else {
+            index = 0;
             src = $(items[0]).data('full');
-            $(items[0]).addClass('active');
-            $('.popup-gallery-image').css({
-                'background-image':'url('+src+')'
-            })
+            $(items[index]).addClass('active');
+            $('.popup-gallery-image img').attr('src', src[index]);
 
         }
+        preload([
+            src[index],
+            (index < src.length-1) ? src[index+1] : src[0],
+            (index > 0) ? src[index-1] : src[src.length-1]
+        ]);
     });
 
     $(document).on('click', '.js-gallery-back-mobile', function (e) {

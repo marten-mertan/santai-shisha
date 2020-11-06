@@ -94,7 +94,7 @@
                 font-size: 16px;
                 line-height: 21px;
                 color: #f2bf25;
-                font-weight: bold;
+                font-weight: 600;
                 margin: 0;
                 -webkit-text-size-adjust: none;
                 -webkit-font-smoothing: antialiased;
@@ -120,10 +120,10 @@
                 border-radius: 0;
                 background: transparent;
                 font-family: "Montserrat";
-                font-size: 16px;
+                font-size: 14px;
                 line-height: 21px;
-                color: #f2bf25;
-                font-weight: bold;
+                color: #8f8fa1;
+                font-weight: 400;
                 margin: 0;
                 -webkit-text-size-adjust: none;
                 -webkit-font-smoothing: antialiased;
@@ -137,14 +137,13 @@
                 @media screen and (max-width: 1140px){
                     padding: 16px 22px;
                     font-size: 13px;
-                    font-weight: normal;
-                    &::placeholder{
-                        color: #8f8fa1;
-                        opacity: 1;
-                    }
-                    &:focus::placeholder{
-                        color:transparent;
-                    }
+                }
+                &::placeholder{
+                    color: #8f8fa1;
+                    opacity: 1;
+                }
+                &:focus::placeholder{
+                    color:transparent;
                 }
             }
         }

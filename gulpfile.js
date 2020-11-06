@@ -82,7 +82,7 @@ function buildAssets(cb) {
       .pipe(dest('docs/'));
   
     src('src/assets/img/**/*.*')
-      .pipe(imagemin())
+      //.pipe(imagemin())
       .pipe(dest('docs/assets/img'));
   
     // Раньше функция что-то возвращала, теперь добавляем вместо этого искусственый колбэк
