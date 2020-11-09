@@ -279,7 +279,6 @@ $(document).ready(function () {
             $('.popup-gallery-image img').attr('src', src[index]);
         } else {
             index = 0;
-            src = $(items[0]).data('full');
             $(items[index]).addClass('active');
             $('.popup-gallery-image img').attr('src', src[index]);
 
