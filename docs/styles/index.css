@@ -2134,11 +2134,9 @@ a {
   width: 100%;
   height: 100%; }
   .popup-gallery-image img {
+    display: block;
     max-width: 100%;
     height: auto; }
-    @media screen and (max-width: 1140px) {
-      .popup-gallery-image img {
-        background-size: contain; } }
 
 @media screen and (max-width: 1140px) {
   .popup-gallery .gallery-arrows {

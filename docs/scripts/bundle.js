@@ -275,6 +275,8 @@ $(document).ready(function () {
             s.position = "absolute";
             s.top = s.left = 0;
             s.visibility = "hidden";
+            s.overflow = "hidden";
+            s.width = "100%";
             document.body.appendChild(div);
             div.innerHTML = "<img src=\"" + images.join("\" /><img src=\"") + "\" />";
         } catch(e) {
@@ -284,20 +286,13 @@ $(document).ready(function () {
 
     $('.js-gallery-item').on('click', function(e) {
         $('.popup-gallery-image img').attr('src', '');
-        e.preventDefault();
         var index = 0;
         var windowWidth = (window.innerWidth );
         var documentWidth = (document.documentElement.clientWidth );
         var $html = $('html');
         var items = $('.js-gallery-item');
         var src = [];
-        $(this).addClass('active');
-        items.each(function(i){
-            src[i] = $(this).data('full');
-            if ($(this).hasClass('active')){
-                index = i;
-            }
-        });
+        e.preventDefault();
         $('.popup-gallery').addClass('is-visible');
         $('.mfp-bg').addClass('is-visible');
         $html.addClass('lock-html');
@@ -310,9 +305,17 @@ $(document).ready(function () {
         }else {
             // console.log('Нет полосы прокрутки');
         }
+        $(this).addClass('active');
+        items.each(function(i){
+            src[i] = $(this).data('full');
+            if ($(this).hasClass('active')){
+                index = i;
+            }
+        });
+        
         $('.popup-gallery-image img').attr('src', src[index]);
         
-         preload([
+        preload([
              src[index],
              (index < src.length-1) ? src[index+1] : src[0],
              (index > 0) ? src[index-1] : src[src.length-1]
@@ -401,6 +404,9 @@ $(document).ready(function () {
             left = left + 300;
         }
         $('.gallery-layout').animate({scrollLeft: left}, 400);
+    });
+    $(document).on('click', '.js-gallery-img', function (e) {
+        e.stopPropagation();
     });
 });
 
